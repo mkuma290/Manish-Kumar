@@ -1,0 +1,340 @@
+Que 1:
+
+import java.util.Scanner;
+import java.lang.Math;
+
+public class ArmstsrongNumber {
+	static boolean isArmstsrongNumber(int n)
+	{
+		int temp, digits=0, last=0,sum=0;
+		temp=n;
+		while (temp>0)
+		{
+			temp=temp/10;
+			digits++;
+			
+		}
+		temp=n;
+		while(temp>0)
+		{
+			last=temp%10;
+			sum+=(Math.pow(last, digits));
+			temp=temp/10;
+		}
+		if(n==sum)
+			return true;
+		    else return false;
+	}
+
+	public static void main(String[] args) {
+		
+		
+		int num;
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Enter the number:");
+		num=sc.nextInt();
+		if(isArmstsrongNumber(num))
+		{
+			System.out.println("Armstrong");
+		}
+		else 
+		{
+			System.out.println("not  Armstrong");
+		}
+		
+		
+		
+
+	}
+
+}
+
+
+Que2:
+
+public class Armstrong {
+		static void findArmstrong(int low, int high)
+		{
+			for (int i = low + 1; i < high; ++i) {
+				int x = i;
+				int n = 0;
+				while (x != 0) {
+					x /= 10;
+					++n;
+				}
+				int pow_sum = 0;
+				x = i;
+				while (x != 0) {
+					int digit = x % 10;
+					pow_sum += Math.pow(digit, n);
+					x /= 10;
+				}
+		
+				if (pow_sum == i)
+					System.out.print(i + " ");	
+			}
+		}
+		
+		public static void main(String args[])
+		{
+			int num1 = 100;
+			int num2 = 999;
+			findArmstrong(num1, num2);
+			System.out.println();
+		}
+	}
+
+
+Que 3:
+
+import java.util .*;
+class SIandCI
+{
+    public static void main (String argu[])
+{
+    double pr, rate, t, sim,com;
+    Scanner sc=new Scanner (System. in);
+    System.out.println("Enter the amount:");
+    pr=sc.nextDouble();
+    System. out. println("Enter the No.of years:");
+    t=sc.nextDouble();
+    System. out. println("Enter the Rate of  interest:");
+    rate=sc.nextDouble();
+    sim=(pr * t * rate)/100;
+    com=pr * Math.pow(1.0+rate/100.0,t) - pr;
+    System.out.println("Simple Interest="+sim);
+    System.out. println("Compound Interest="+com);
+   }
+}
+
+Que 4:
+
+import java.util.Scanner;
+public class Result {
+
+	public static void main(String[] args) {
+		Float num , s1,s2,s3,s4,s5;
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter subject 1 marks :");
+		s1= sc.nextFloat();
+		System.out.println("Enter subject 2 marks :");
+		s2= sc.nextFloat();
+		System.out.println("Enter subject 3 marks :");
+		s3= sc.nextFloat();
+		System.out.println("Enter subject 4 marks :");
+		s4= sc.nextFloat();
+		System.out.println("Enter subject 5 marks :");
+		s5= sc.nextFloat();
+		sc.close();
+		
+		if (s1>60 && s2>60 && s3>60 && s4>60 && s5>60)
+		{
+			System.out.println("You are passed");
+			
+		}else if (
+				 (s1>60) || (s2>60) && (s3>60) && (s4>60) && (s5>60)
+				&& (s1>60) && (s2>60) || (s3>60) && (s4>60) && (s5>60)
+				&& (s1>60) && (s2>60) && (s3>60) || (s4>60) && (s5>60)
+				&& (s1>60) && (s2>60) && (s3>60) && (s4>60) || (s5>60)
+				)
+				
+		{
+			System.out.println("You are promoted");
+		}
+		else
+		{
+			System.out.println("You are failed");	
+	    }
+
+	}
+
+		
+
+	}
+
+Que 5: 
+
+import java.util.*;
+class a
+{ 
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+        double n=sc.nextDouble();
+        double tax=0;
+        if(n<=180000)
+        {
+        tax=0;
+        }
+        else 
+        if(n>180000 && n<=300000)
+        {
+        tax=n*(0.1);
+        }
+        else
+        if(n>300000 && n<=500000)
+        {
+        tax=n*(0.2);
+        }
+        else if(n>500000 && n<=1000000)
+        {
+        tax=n*(0.3);
+        }
+        System.out.print(tax);
+    }
+}
+
+Que 6: 
+
+import java.util.*;
+import java.util.Scanner;
+public class Array {
+	
+	public static void main(String[] args)   
+	{  
+	int n=5;  int temp =0;
+	Scanner sc=new Scanner(System.in);   
+	int[] array = new int[5];  
+	for(int i=0; i<n; i++)  
+	{   
+	array[i]=sc.nextInt();  
+	}  
+	 for (int i = 0; i < array.length; i++) {     
+         for (int j = i+1; j < array.length; j++) {     
+            if(array[i] > array[j]) {    
+                temp =  array[i];    
+                array[i] =array[j];    
+                array[j] = temp;    
+            }     
+         }     
+     }    
+       
+     System.out.println();    
+	System.out.print("Array elements are: ");   
+	for (int i=0; i<n; i++)   
+	{  
+	System.out.print(array[i]+" ");  
+	}  
+	}  
+	}
+
+Que 7:
+
+import java.util.*;
+import java.util.Scanner;
+public class Array {
+	
+	public static void main(String[] args)   
+	{  
+	int n=15;  int temp =0;
+	int value_search=19;
+	Scanner sc=new Scanner(System.in);   
+	int[] array = new int[15];  
+	for(int i=0; i<n; i++)  
+	{   
+	array[i]=sc.nextInt();  
+	}  
+	int c=0;
+	 for(int i=0;i<15;i++)
+	 {
+	     if(array[i]==19)
+	     {
+	         c++;
+	         break;
+	     }
+	     
+	 }
+       if(c==1)
+	     System.out.print("yes it contains");
+	     else
+	     System.out.print("No");
+	}
+	}
+
+
+
+Que 8:
+
+public class BubbleSort {  
+    static void bubbleSort(int[] arr) {  
+        int n = arr.length;  
+        int temp = 0;  
+         for(int i=0; i < n; i++){  
+                 for(int j=1; j < (n-i); j++){  
+                          if(arr[j-1] > arr[j]){  
+                                 //swap elements  
+                                 temp = arr[j-1];  
+                                 arr[j-1] = arr[j];  
+                                 arr[j] = temp;  
+                         }  
+                          
+                 }  
+         }  
+  
+    }  
+    public static void main(String[] args) {  
+                int arr[] ={5,12,14,6,78,19,1,23,26,35,37,7,52,86,47};  
+                 
+                System.out.println("Array Before Bubble Sort");  
+                for(int i=0; i < arr.length; i++){  
+                        System.out.print(arr[i] + " ");  
+                }  
+                System.out.println();  
+                  
+                bubbleSort(arr);//sorting array elements using bubble sort  
+                 
+                System.out.println("Array After Bubble Sort");  
+                for(int i=0; i < arr.length; i++){  
+                        System.out.print(arr[i] + " ");  
+                }  
+   
+        }  
+}  
+
+Que 9:
+
+import java.util.*;
+import java.util.Scanner;
+public class Array {
+	
+	public static void main(String[] args)   
+	{  
+	Scanner sc=new Scanner(System.in);
+	int stu1[]=new int[3];
+	int stu2[]=new int[3];
+	int stu3[]=new int[3];
+	stu1[0]=67;
+	stu1[1]=47;
+	stu1[2]=67;
+	stu2[0]=87;
+	stu2[1]=97;
+	stu2[2]=67;
+	stu3[0]=67;
+	stu3[1]=57;
+	stu3[2]=87;
+	int stu1_total=stu1[0]+stu1[1]+stu1[2]; 
+	int stu2_total=stu2[0]+stu2[1]+stu2[2]; 
+	int stu3_total=stu3[0]+stu3[1]+stu3[2];
+	int stu1_avg=stu1_total/3;
+	int stu2_avg=stu2_total/3;
+	int stu3_avg=stu3_total/3;
+	int all_stu_total_sub1=stu1[0]+stu2[0]+stu3[0];
+	int all_stu_total_sub2=stu1[1]+stu2[1]+stu3[1];
+	int all_stu_total_sub3=stu1[2]+stu2[2]+stu3[2];
+	int all_stu_avg_sub1=all_stu_total_sub1/3;
+	int all_stu_avg_sub2=all_stu_total_sub2/3;
+	int all_stu_avg_sub3=all_stu_total_sub3/3;
+	System.out.println(stu1_total);
+	System.out.println(stu2_total);
+	System.out.println(stu3_total);
+	System.out.println(stu1_avg);
+	System.out.println(stu2_avg);
+	System.out.println(stu3_avg);
+	System.out.println(all_stu_total_sub1);
+	System.out.println(all_stu_total_sub2);
+	System.out.println(all_stu_total_sub3);
+	System.out.println(all_stu_avg_sub1);
+	System.out.println(all_stu_avg_sub2);
+	System.out.println(all_stu_avg_sub3);
+	}
+	}

@@ -1,0 +1,251 @@
+Que 1:
+class Singleton {
+	private static Singleton single_instance = null;
+
+	public String a;
+
+	private Singleton()
+	{
+		a = "Hello I am a string ";
+	}
+	public static Singleton Singleton()
+	{
+		if (single_instance == null) {
+			single_instance = new Singleton();
+		}
+		return single_instance;
+	}
+}
+
+class singletone {
+	public static void main(String args[])
+	{
+		Singleton x = Singleton.Singleton();
+		Singleton y = Singleton.Singleton();
+		Singleton z = Singleton.Singleton();
+		x.a = (x.a).toUpperCase();
+
+		System.out.println("String from x is " + x.a);
+		System.out.println("String from y is " + y.a);
+		System.out.println("String from z is " + z.a);
+		System.out.println("\n");
+
+		z.a = (z.a).toLowerCase();
+
+		System.out.println("String from x is " + x.a);
+		System.out.println("String from y is " + y.a);
+		System.out.println("String from z is " + z.a);
+	}
+}
+
+Que 2:
+package overriding_concept;
+ class employee
+{ 
+	  int salary_manager=0;
+      int salary_labour=0;
+      int overtime=200;
+      int incentives=5000;
+	public void salary()
+	{
+		 salary_manager=salary_manager+incentives;
+		 salary_labour=salary_labour+overtime;
+		 System.out.println(salary_manager);
+		 System.out.println(salary_labour);
+		 
+	}
+}
+	class manager extends employee
+	{ 
+		int salary_manager=0;
+	    int incentives=5000;
+		public void salary()
+		{
+			 salary_manager=salary_manager+incentives;
+			 System.out.println(salary_manager);
+		}
+		
+	}
+	
+	
+	class labour extends employee
+	{  
+		int salary_labour=0;
+	    int overtime=400;
+		public void salary()
+		{
+			salary_labour=salary_labour+overtime;
+			 System.out.println(salary_labour);
+		}
+	}
+	
+
+ 
+ 
+public class Polymorphism {
+	
+public static void main(String args[])
+{
+	 manager ab=new manager();
+	ab.salary();
+	
+}
+}
+
+Que 3:import java.util.*;
+import java.util.Scanner;
+public class Bank{
+	
+	public static void main(String[] args)   
+	{  
+	  saving obj=new saving();
+	  obj.totalCash();
+	  current obj1=new current();
+	  obj1.totalCash();
+	}
+}
+	class saving
+	{
+	  public void totalCash()
+	  {
+	     System.out.println(100000); 
+	  }
+	}
+	class current
+	{
+	   public void totalCash()
+	   {
+	        System.out.print(200000);
+	   }
+	}
+
+
+Que 4:package abstraction;
+
+  abstract class abstraction
+ {
+    void show()
+   {
+	System.out.println("Manish");    
+   }
+    public abstract void call();
+    
+}
+ class b extends abstraction
+ {
+	 public void call()
+	 {
+		 System.out.println("shreya");
+	 }
+ }
+class a{
+	public static void main(String args[])
+	{
+		abstraction obj =new b();
+		obj.show();
+		obj.call();
+	}
+}
+
+
+
+Que 5:
+
+public class draw {
+    public static void main(String[] args) {
+
+        
+        
+        Shape rectangle = new Rectangle();
+        rectangle.draw();
+
+       
+        Shape cube = new Cube();
+        cube.draw();
+
+        
+        Shape line = new Line();
+        line.draw();
+    }
+}
+
+abstract class Shape {
+public abstract void draw();
+
+}
+class Rectangle extends Shape {
+public void draw() {
+	System.out.println("This is Rectangle");
+			
+		}
+
+    }
+class Line extends Shape {
+           
+public void draw() {
+	System.out.println("This is Line");
+				
+				
+			}
+
+        }
+class Cube extends Shape {
+               
+public void draw() {
+	System.out.println("This is Cube");
+					
+					
+				}
+
+            }
+
+Que 6:
+
+
+
+
+
+Que 7 :
+package desert;
+
+abstract public class DessertItem
+{
+ abstract public void getcost();
+}
+ class dessert extends DessertItem
+{ int candy=1;
+int cokie=3;
+int icecream=1;
+	public void getcost()
+	{
+		 candy= candy+60;
+		 cokie= cokie+70;
+		  icecream=icecream;
+		System.out.print("cost is:"+ (candy+cokie+icecream));
+	}
+	public void additem()
+	{
+		System.out.print("all items is added");
+	}
+	public void order()
+	{
+		System.out.print("order placed ");
+	}
+}
+ class manish 
+ {  
+	 public static void main(String arg[])
+	 {   String a="owner";
+	    
+		 dessert obj =new dessert();
+		 if(a.equals("owner"))
+		 {
+			 obj.getcost();
+		 }
+		 else
+			 obj.order();
+		 		
+	 }
+ }
+
+	

@@ -1,0 +1,169 @@
+string and string buffer assighment
+
+1.import java.util.*;
+
+class a
+{
+    public static void main(String args[])
+    {
+    
+        StringBuffer str=new StringBuffer("Manish");
+        System.out.print(str.length());
+        
+    }
+}
+
+2.import java.util.*;
+
+class a
+{
+    public static void main(String args[])
+    {
+    
+        String str1="Hello";
+        String str2="How are you";
+        System.out.print(str1+(" ")+str2);
+        
+    }
+}
+
+
+3. a. import java.util.*;
+
+class a
+{
+    public static void main(String args[])
+    {
+    
+       //String str1="HELLO";
+       String str2="hi";
+        
+        System.out.print(str2.toUpperCase());
+        
+    }
+} 
+
+b.import java.util.*;
+
+class a
+{
+    public static void main(String args[])
+    {
+    
+       String str1="HELLO";
+       
+        
+        System.out.print(str1.toLowerCase());
+        
+    }
+} 
+
+c.  import java.util.*;
+
+class a
+{
+    public static void main(String args[])
+    {
+    
+       String str1="Manish Kumar";
+      
+           System.out.print(str1.replace('a','$'));
+       
+        
+        
+        
+    }
+} 
+
+d.  import java.util.*;
+
+class a
+{
+    public static void main(String args[])
+    {
+    
+       String str1="Manish Kumar";
+      
+           System.out.print(str1.contains("ani");
+       
+        
+        
+        
+    }
+} 
+
+e.import java.util.*;
+
+class a
+{
+    public static void main(String args[])
+    {
+    
+       String originalString="Manish Kumar";
+       String str="Manish Kumar";
+           System.out.print(originalString.equals(str));
+              
+    }
+} 
+
+f.import java.util.*;
+
+class a
+{
+    public static void main(String args[])
+    {
+    
+       String originalString="Manish Kumar";
+       String str="Manish Kumar";
+       if(originalString==str)
+           System.out.print("equal");
+           else
+           System.out.print("not equal");
+        
+    }
+} 
+
+
+Assignment stringbuffer
+
+1. import java.util.*;
+
+class a
+{
+    public static void main(String args[])
+    {
+    
+       StringBuffer obj = new StringBuffer();
+       obj.append("stringbuffer ");
+       obj.append("is a peer class of string");
+       obj.append("that provides much of");
+       obj.append("the functionality of string");
+        System.out.print(obj);
+    }
+} 
+
+2.import java.util.*;
+
+class a
+{
+    public static void main(String args[])
+    {
+    
+       StringBuffer obj = new StringBuffer("it is used to _ at the specified index");
+      obj.replace(14,15,"insert text");
+      System.out.print(obj.toString());
+    }
+}
+
+3.import java.util.*;
+
+class a
+{
+    public static void main(String args[])
+    {
+    
+       StringBuffer obj = new StringBuffer("it is used to _ at the specified index");
+      obj.reverse();
+      System.out.print(obj.toString());
+    }
+}

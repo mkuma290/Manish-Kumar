@@ -1,0 +1,119 @@
+assignment exception handling
+
+1.import java.util.*;
+
+class a
+{
+    public static void main(String args[])
+    {
+    
+       try
+       {
+           int a=20;
+           int b=0;
+           int d=a/b;
+       }
+       catch(ArithmeticException e)
+       {
+         System.out.print("handled exception");  
+       }
+       finally
+       {
+           System.out.print("shreya");
+       }
+    }
+}
+
+2.  import java.util.*;
+
+class a
+{
+    public static void main(String args[])
+    {
+        
+       try
+       {
+            String[] strArray = {"Sun", "Mon", "Tue"};        
+         List list = Arrays.asList(strArray);
+         list.add("wed");
+       }
+        catch(UnsupportedOperationException un)
+      {
+       System.out.print("UnsupportedOperationException   ");  
+       un.printStackTrace();
+      }
+       try
+       {
+           int a=20;
+           int b=0;
+           int d=a/b;
+       }
+       catch(ArithmeticException e)
+       {
+         System.out.print("handled exception");  
+       }
+     
+      
+    }
+}
+
+3.  import java.util.*;
+class insufficientbalanceException extends Exception
+{
+    public  insufficientbalanceException(String str)
+    {
+        super(str);
+    }
+}
+class illegalBankTransactionException extends Exception
+{
+    public illegalBankTransactionException(String s)
+    {
+        super(s);
+    }
+}
+class a
+{ 
+     public static void fun(int n) throws insufficientbalanceException
+     {
+         int balance=2340;
+         
+         if(n<balance || (balance==0))
+         {
+             throw new insufficientbalanceException("insufficient balance");
+         }
+         else
+         {
+             System.out.print("sufficient balance");
+         }
+     }
+     public static void fun2(int n) throws illegalBankTransactionException
+     {
+         if(n<0)
+         {
+             throw new illegalBankTransactionException("value is less than 0");
+         }
+         else
+         {
+             System.out.println("correct transaction");
+         }
+     }
+    public static void main(String args[])
+    {
+        try
+        {
+        fun(1231);
+        }       
+      catch(insufficientbalanceException e)
+      {
+          System.out.println("exception occured   " + e);
+      }
+      try{
+          fun2(-1);
+      }
+      catch(illegalBankTransactionException I)
+      {
+          System.out.print("exception occured  " +I);
+      }
+    }
+}
