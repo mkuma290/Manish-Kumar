@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans  
+    xmlns="http://www.springframework.org/schema/beans"  
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+    xmlns:p="http://www.springframework.org/schema/p"  
+    xsi:schemaLocation="http://www.springframework.org/schema/beans  
+               http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">  
+  
+
+
+<bean name="address" class="spring.Spring_core.spring.Spring_core.Address">  
+<property name="street"> <value>1 </value> </property>  
+<property name="city"> <value>Noida</value> </property>
+<property name="state"> <value>UP</value> </property>
+<property name="zip"> <value>203396</value> </property>
+</bean>  
+
+<bean name="Customer" class="spring.Spring_core.spring.Spring_core.Customer">  
+<constructor-arg value="1"  />
+<constructor-arg value="manish"  />
+<constructor-arg value="966554433"  />
+<constructor-arg value="noida"  />
+</bean>  
+  
+  
+  <bean name="Question"  class="spring.Spring_core.spring.Spring_core.collection">
+  <property name="set">
+  <set>
+  <value>
+  what are you doing?
+  </value>
+  <value>
+  what are you doing?
+  </value>
+  
+  </set>
+  </property>
+  
+  <property name="que"> 
+  <map>
+  <entry
+  key="1" value="How are you?"
+  />
+  <entry
+  key="2" value="who are you?"
+  />
+  <entry
+  key="3" value="Are you there?"
+  />
+  </map>
+   </property>  
+  
+  </bean>
+  
+  <bean  name="bank"  class ="spring.Spring_core.spring.Spring_core.Bankaccount_controller">
+  <property name="withdraw_amt"><value>30</value></property>
+  <property name="deposit_amt"><value>3</value></property>
+  
+  
+  </bean>
+  
+  <bean name="banker1" class="spring.Spring_core.spring.Spring_core.Banker">
+  
+  <property name="name"><value>Manish</value></property>
+   <property name="address"><value>Noida</value></property>
+  
+  </bean>
+  
+  <bean name="abc" class="spring.Spring_core.spring.Spring_core.Autowiring" autowire ="byType"></bean>
+  
+  <bean class="org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor"></bean>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</beans>  
